@@ -8,9 +8,9 @@ To-do-list
 ![image](https://user-images.githubusercontent.com/28037427/217951109-df875069-7aff-493a-87de-0c01fd3fd0b3.png)
 
 ### Firebase Configuration, can be found in:
-	#### -> firebase project 
-		#### -> settings
-			#### -> general
+	-> firebase project 
+		-> settings
+			-> general
 
 #### index.html, lines 22-38
 ```
