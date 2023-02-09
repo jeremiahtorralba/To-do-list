@@ -1,0 +1,44 @@
+<html>
+    <head>
+            <link rel="shortcut icon" href="#" />
+        <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body> 
+
+        <div class="content">
+            <form id="add-todo-form">
+                <input type="text" name="todo" placeholder="To Do" id="todo">   
+                <input type="text" name="note" placeholder="Notes" id="note">
+                <button id="add" href="index.html" class="btn">+</button>
+            </form>
+            <button id="lit" class="btn">&#x1F4A1</button>
+        </div>
+
+        <ul id="todoList"></ul>
+
+        <!--Firebase to web app-->
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "",
+                authDomain: "",
+                databaseURL: "",
+                projectId: "",
+                storageBucket: "",
+                messagingSenderId: "",
+                appId: "",
+                measurementId: ""
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();           
+        </script>
+        <!--Firebase to web app-->
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>

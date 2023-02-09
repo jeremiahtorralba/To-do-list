@@ -1,0 +1,426 @@
+:root {
+    --background: white;
+    --foreg-col: white;
+    --form-inp: white;
+    --li: #F8F8F8;
+    --todo: snow;
+    --note: #FAF9F6;
+    --li-even: #F0F0F0; 
+    --font-color: black;
+    --box-glow: 1px 3px 5px lightblue;
+    --border-bot: 1px solid lightblue;
+    --border-bot2: 2px solid lightskyblue;
+    --border-bot-foc: 4px solid lightskyblue;
+    --dark-btn: #1b31a1;
+    --btns: black;
+    --opacity: 70%;
+    --opacity2: 75%;
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--background);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.5s ease-in-out;
+}
+
+.darkMode {
+    --background: #202945;
+    --foreg-col: #162780;
+    --form-inp: #172a8a;
+    --li: #192d94;
+    --todo: #15257d;
+    --note: #1b31a1;
+    --li-even: #13216e;
+    --font-color: white;
+    --box-glow: 1px 3px 5px #99FFCC;
+    --border-bot: 1px solid #99FFCC;
+    --border-bot-foc: 4px solid #99FFCC;
+    --dark-btn: #99FFCC;
+    --btns: black;
+    --opacity: 90%;
+    --opacity2: 95%;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content {
+    background-color: var(--foreg-col);
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 20px 5px;
+    box-shadow: var(--box-glow);
+    border-radius: 20px;
+}
+
+form input {
+    float: left;
+    width: 41.25%;
+    margin: 0;
+    border: 0;
+    border-bottom: var(--border-bot);
+    margin: 0 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: var(--form-inp);
+    color: var(--font-color);
+}
+
+::placeholder {
+    color: var(--font-color);
+    opacity: var(--opacity);
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: var(--border-bot-foc);
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+    opacity: var(--opacity);
+}
+
+#todo, #note { border-radius: 4px; }
+
+input:focus ~ #add { visibility: visible; }
+
+form:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#add-todo-form, #edit-todo-form {
+    margin-left: 35px;
+    padding-top: 5px;
+}
+
+button {
+    visibility: hidden;
+    font-size: 20px;
+    font-style: bold;
+    border-radius: 100%;
+    margin-left: 27.50px;
+    padding: 9px 14px;
+    font-weight: bold;
+    color: var(--btns);
+    border-style: none;
+    box-shadow: var(--box-glow);
+    text-decoration: none;
+    cursor: pointer;
+    filter: brightness(100%);
+}
+
+button:hover, button:active {
+    opacity: var(--opacity2);
+    visibility: visible;
+}
+
+#add { background: lightgreen; }
+
+#lit {
+    visibility: visible;
+    background-color: var(--dark-btn);
+    box-shadow: var(--box-glow);
+    border-radius: 70%;
+    padding: 6px 8px;
+    font-size: 12px;
+    margin-top: -10.5%;
+    margin-left: 96.25%;
+    display: block;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 0 0;
+}
+
+li {
+    background-color: var(--li);
+    max-width: 745px;
+    margin: 30px auto;
+    padding: 20px 5px;
+    box-shadow: var(--box-glow);
+    border-radius: 20px;
+}
+
+li:nth-child(even) { background: var(--li-even); }
+
+li span { 
+    display: block; 
+    border-bottom: var(--border-bot2);
+    padding: 0 0 4px;
+    width: 81.5%;
+}
+
+li span:nth-child(2) {
+    font-size: 16px;
+    margin-top: 6px;
+    color: var(--font-color);
+}
+
+li div {
+    top: 0;
+    background: var(--li);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+    position: relative;
+}
+
+#form2 {
+    color: var(--font-color);
+    padding-left: 33px;
+    margin-bottom: 0px;
+}
+
+#form2 input:focus { border-bottom: var(--border-bot-foc); }
+
+#form2:after { color: var(--font-color); }
+
+#todos, #notes {
+    border-bottom: var(--border-bot);
+    font-size: 18px;
+    color: var(--font-color);
+    width: 85.25%;
+}
+
+#todos {
+    background: var(--todo);
+    border-radius: 4px;
+}
+
+#notes {
+    background: var(--note);
+    border-radius: 4px;
+    display: block;
+    margin: 3% 0% 0% 1%;    
+}
+
+#todos:focus ~ #del, #notes:focus ~ #del { visibility: hidden; }
+
+#todos:focus ~ #edit, #notes:focus ~ #edit, #edit:active {
+    visibility: visible;
+    outline: none;
+    border-bottom: var(--border-bot-foc);
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+    color: var(--btns);
+    opacity: var(--opacity);
+}
+
+#del { 
+    visibility: visible;
+    background: lightcoral; 
+    margin-left: 25px;
+    margin-top: 0px;
+    padding: 8px 14px;
+}
+
+#edit { 
+    visibility: hidden;
+    background: gold;
+    margin-left: 25.25px;
+    margin-top: 25px; 
+    font-size: 18px;
+    padding: 6px 10px;
+}
+    
+@media screen and (min-width: 581px) and (max-width: 750px) {
+    #add-todo-form {
+        margin-left: 17px;    
+    }
+    button {
+        margin-left: 15px;
+    }
+    #lit {
+        margin-top: -10.5%;
+        margin-left: 96.25%;
+    }
+    #form2 {
+        padding-left: 17px;
+    }
+    #del { 
+        margin-left: 13px;
+    }
+    #edit { 
+        margin-left: 13.25px;
+    }
+}
+
+@media screen and (min-width: 514px) and (max-width: 580px) {
+    #add-todo-form {
+        margin-left: 15px;    
+    }
+    button {
+        margin-left: 15px;
+    }
+    #lit {
+        padding: 4px 6px;
+        margin-top: -14.75%;
+        margin-left: 95%;
+    }
+    #form2 {
+        padding-left: 15px;
+    }
+    #del { 
+        margin-left: 13px;
+    }
+    #edit { 
+        margin-left: 13.25px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 513px) {
+    #add-todo-form {
+        margin-left: 10px;    
+    }
+    button {
+        margin-left: 10px;
+    }
+    #form2 {
+        padding-left: 10px;
+    }
+    #del { 
+        margin-left: 10px;
+    }
+    #edit { 
+        margin-left: 10.25px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    #add-todo-form {
+        margin-left: 10px;    
+    }
+    button {
+        margin-left: 10px;
+    }
+    #lit {
+        padding: 4px 6px;
+        margin-top: -17%;
+        margin-left: 94.5%;
+    }
+    #form2 {
+        padding-left: 10px;
+    }
+    #del { 
+        margin-left: 10px;
+    }
+    #edit { 
+        margin-left: 10.25px;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 730px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -12%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 698px) and (max-width: 700px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -12.25%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 691px) and (max-width: 697px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -12.25%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 690px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -12.25%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 639px) and (max-width: 660px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -12%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 628px) and (max-width: 638px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -13%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 627px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -13.75%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 581px) and (max-width: 600px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -14.50%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 552px) and (max-width: 580px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -15.10%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 531px) and (max-width: 551px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -15.80%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 521px) and (max-width: 531px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -16.30%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 509px) and (max-width: 520px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -16.75%;
+        margin-left: 95%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 508px) {
+    #lit {
+        padding: 4px 6px;
+        margin-top: -17%;
+        margin-left: 95%;
+    }
+}
