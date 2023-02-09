@@ -34,11 +34,11 @@ To-do-list - [Firebase configuration](https://github.com/jeremiahtorralba/To-do-
 ```
 
 ### Dark mode
-#### app.js, line 3
+#### Adding Dark mode button - app.js, line 3
 ```
 const darkBtn = document.querySelector('#lit'); // dark mode button
 ```
-#### app.js, lines 97-117
+#### Dark mode button functionality - app.js, lines 97-117
 ```
 // Toggle dark mode
 const darkMode = () => {
