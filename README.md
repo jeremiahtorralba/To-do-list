@@ -7,12 +7,11 @@ To-do-list
 ### Editing To do and Note
 ![image](https://user-images.githubusercontent.com/28037427/217951109-df875069-7aff-493a-87de-0c01fd3fd0b3.png)
 
-### Firebase Configuration, can be found in:
+### Firebase Configuration values can be found in:
 	-> firebase project 
 		-> settings
 			-> general
-
-### insert values into project's Firebase configuration:
+### Insert values into project's Firebase configuration:
 #### index.html, lines 22-38
 ```
 <!--Firebase to web app-->
@@ -39,7 +38,7 @@ To-do-list
 ```
 const darkBtn = document.querySelector('#lit'); // dark mode button
 ```
-#### lines 97-117
+#### app.js, lines 97-117
 ```
 // Toggle dark mode
 const darkMode = () => {
@@ -63,7 +62,8 @@ if(setDarkMode === 'on') { // check if dark mode is on or off on reload
     darkMode();
 }
 ```
-#### To use :root and .darkMode
+
+### To use :root and .darkMode
 ```
 body {
     color: var(--font-color);
