@@ -12,6 +12,7 @@ To-do-list
 		-> settings
 			-> general
 
+### insert values into project's Firebase configuration:
 #### index.html, lines 22-38
 ```
 <!--Firebase to web app-->
@@ -30,11 +31,10 @@ To-do-list
             firebase.initializeApp(config);
             const db = firebase.firestore();           
         </script>
-        <!--Firebase to web app-->
+<!--Firebase to web app-->
 ```
 
 ### Dark mode
-
 #### app.js, line 3
 ```
 const darkBtn = document.querySelector('#lit'); // dark mode button
@@ -63,13 +63,13 @@ if(setDarkMode === 'on') { // check if dark mode is on or off on reload
     darkMode();
 }
 ```
-
 #### To use :root and .darkMode
+```
 body {
     color: var(--font-color);
     background-color: var(--background);
 } 
-
+```
 #### :root, styles.css, lines 1-18
 ```
 :root {
@@ -91,7 +91,6 @@ body {
     --opacity2: 75%;
 }
 ```
-
 #### .darkMode, styles.css, lines 27-43
 ```
 .darkMode {
