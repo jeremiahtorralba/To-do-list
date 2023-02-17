@@ -1,6 +1,12 @@
 # To-do-list
 To-do-list - [Firebase configuration](https://github.com/jeremiahtorralba/To-do-list/blob/main/README.md#firebase-configuration-values-can-be-found-in), [Dark mode](https://github.com/jeremiahtorralba/To-do-list/blob/main/README.md#dark-mode)
 
+This To-do-list application is composed of:
+* index.html
+* app.js javascript
+* Firebase - Firestore database
+* styles.css styling
+
 ### To do and Note
 ![image](https://user-images.githubusercontent.com/28037427/217951086-1f137a2b-56ed-4ce7-8b13-c171e59773a8.png)
 
