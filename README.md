@@ -13,7 +13,7 @@ This To-do-list application is composed of:
 ### Editing To do and Note
 ![image](https://user-images.githubusercontent.com/28037427/217951109-df875069-7aff-493a-87de-0c01fd3fd0b3.png)
 
-### Firebase Configuration values can be found in:
+### Firebase Configuration values can be found in: https://console.firebase.google.com/project/<PROJECTNAME>
 	-> firebase project 
 		-> settings
 			-> general
@@ -69,7 +69,7 @@ if(setDarkMode === 'on') { // check if dark mode is on or off on reload
 }
 ```
 
-### To use :root and .darkMode
+### To be able to view and use :root and .darkMode
 ```
 body {
     color: var(--font-color);
