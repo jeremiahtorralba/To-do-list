@@ -70,6 +70,7 @@ if(setDarkMode === 'on') { // check if dark mode is on or off on reload
 ```
 
 ### To be able to view and use :root and .darkMode
+#### Example:
 ```
 body {
     color: var(--font-color);
